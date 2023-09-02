@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background: black;
+}
+.container {
+    background: #202020;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100vh;
+    /*Flexbox direction: se utiliza para direccionar los hijos, en caso de querer de que esten uno abajo de otro -->column
+    uno al lado de otro -->row
+    column-reverse: es para modiifcar el orden de los item 
+    justify-content: es utilizado para definir como alinear los elementos que estan dentro del contendor flex
+    investigar mas sobre aling-item
+    flex-wrap: cuando no hay espacion suficiente para los hijos en el container, estos se reorganizan*/
+}
+
+.uno {
+    background:green;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+}
+.dos {
+    background:pink;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+}
+.tres {
+    background:green;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+}
+
+/*ESTO ES LO BASICO, EVITA LAS DESPROPORCIONES EN LA PAGINA*/
+/*body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.padre {
+    background: red;
+    height: 300px;
+    width: 300px;
+    padding: 120px;
+}
+*/
+/*
+ESTO CON EL PADDING -  AGREGA UN RELLENO Y MUEVE AL HIJO HACIA ADENTRO
+*/
+/*
+.padre {
+    background: red;
+    height: 300px;
+    width: 300px;
+    padding: 120px;
+}
+.hijo {
+    height: 100px;
+    width: 100px;
+    background: black;
+}
+*/
+/* ESTO ES CON EL MARGIN - Se mueve desde afuera
+ .padre {
+    background: red;
+    height: 300px;
+    width: 300px;
+    margin: 50px 50px 100px 100px;
+}
+.hijo {
+    background: black;
+    height: 100px;
+    width: 100px;
+    margin: 120px;
+} */
