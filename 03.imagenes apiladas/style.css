@@ -1,0 +1,83 @@
+body {
+  font-family: sans-serif;
+  background-color: #101;
+  color: white;
+}
+.imagen-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /*utiliza 100% valor de la compu*/
+}
+.imagen-container .imagen{
+    position: relative;
+    display: inline-flex;
+    margin-right: -20px;
+    flex-direction: column;  
+}
+.imagen-container .imagen img {
+  width: 150px;
+  height: 300px;
+  transition: transform 0.32s ease-in-out;
+}
+.imagen-container .imagen .name{
+  position: absolute; /*Esta posicion cambia (su top y left configurados por ejem) en base a su contenedor MAS CERCANO, cambio la relativa, cambia en base a su mismo elemento*/
+  background-color:blueviolet;
+  display: none; /*Para ocultar los nombres*/
+  border-radius: 5px;
+  min-width: 100px;
+  width: 150px;
+  color: white;
+  top: -70px;
+  
+  padding: 10px 15px;
+
+
+}
+.imagen-container .imagen:hover .name .text {
+  display: inline-block;
+  text-overflow: ellipsis; /*Para cortar textos largos*/
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  width:150px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.imagen-container .imagen:hover .name {
+  display: flex;
+  transform: translateY(-20px);
+}
+.container-logo img {
+  width: 400px;
+  height: 200px;
+}
+.container-logo{
+  display: flex;
+  justify-content: center;
+}
+.imagen-container .imagen .name::before{
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  left: 40%;
+  bottom: -20px;
+  border-top: 10px solid blueviolet;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.imagen-container .imagen:hover img {
+  transform: translateY(-20px);
+}
+@media (max-width: 680px){
+  .imagen-container{
+    flex-direction: column;
+    height: 180vh;
+    position: relative;
+    top: 50px;
+  }
+}

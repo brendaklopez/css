@@ -1,0 +1,3 @@
+investigar apis de naruto con nombre y foto para facilitar la muestra de infromacion.
+Desplegable infinito.
+
